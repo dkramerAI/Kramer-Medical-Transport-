@@ -6,17 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
   if (mobileToggle && nav) {
     mobileToggle.addEventListener("click", function () {
       nav.classList.toggle("active");
+      this.classList.toggle("active");
 
-      // Animate hamburger to X
+      // Animate hamburger to X with smooth transition
       const spans = this.querySelectorAll("span");
       if (nav.classList.contains("active")) {
-        spans[0].style.transform = "rotate(45deg) translate(6px, 6px)";
+        spans[0].style.transform = "translateY(8.5px) rotate(45deg)";
         spans[1].style.opacity = "0";
-        spans[2].style.transform = "rotate(-45deg) translate(6px, -6px)";
+        spans[1].style.transform = "scaleX(0)";
+        spans[2].style.transform = "translateY(-8.5px) rotate(-45deg)";
+        document.body.style.overflow = "hidden";
       } else {
         spans[0].style.transform = "none";
         spans[1].style.opacity = "1";
+        spans[1].style.transform = "scaleX(1)";
         spans[2].style.transform = "none";
+        document.body.style.overflow = "";
       }
     });
 
@@ -25,10 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(function (link) {
       link.addEventListener("click", function () {
         nav.classList.remove("active");
+        mobileToggle.classList.remove("active");
         const spans = mobileToggle.querySelectorAll("span");
         spans[0].style.transform = "none";
         spans[1].style.opacity = "1";
+        spans[1].style.transform = "scaleX(1)";
         spans[2].style.transform = "none";
+        document.body.style.overflow = "";
       });
     });
   }

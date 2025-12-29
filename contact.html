@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Kramer Medical Transport for BLS ambulance transportation. Available 24/7 for scheduling. Call our dispatch at (209) 549-6501.">
+  <title>Contact Us | Kramer Medical Transport</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Kramer Medical Transport Logo" class="brand-logo">
+        <span class="brand-name">Kramer Medical Transport</span>
+      </a>
+      
+      <div class="dispatch-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.24 1.01l-2.2 2.2z"/>
+        </svg>
+        <span>Dispatch: <a href="tel:2095496501">(209) 549-6501</a></span>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Our Services</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h1>Contact Us</h1>
+        <p class="page-header-subtitle">Available 24/7 for Your Transport Needs</p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="content">
+      <div class="container">
+        <p>Ready to schedule a transport or have questions about our services? We're here to help 24 hours a day, 7 days a week.</p>
+        
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          
+          <div class="contact-item">
+            <strong>Dispatch Phone:</strong>
+            <span><a href="tel:2095496501">(209) 549-6501</a> — Available 24/7</span>
+          </div>
+          
+          <div class="contact-item">
+            <strong>General Inquiries:</strong>
+            <span><a href="mailto:kramermedicaltransport@gmail.com">kramermedicaltransport@gmail.com</a></span>
+          </div>
+          
+          <div class="contact-item">
+            <strong>Owner:</strong>
+            <span><a href="mailto:mkramer@kramermedicaltransport.com">mkramer@kramermedicaltransport.com</a></span>
+          </div>
+          
+          <div class="contact-item">
+            <strong>Operating Hours:</strong>
+            <span>24 Hours a Day / 7 Days a Week</span>
+          </div>
+        </div>
+        
+        <div class="contact-notice">
+          <strong>Service Start Date:</strong> Transporting begins January 2026.
+        </div>
+        
+        <h2>Request a Quote</h2>
+        <p>For non-urgent transport requests, use the form below and we'll contact you to confirm details.</p>
+        
+        <div class="quote-form">
+          <h3>Transport Request Form</h3>
+          <form id="quoteForm" class="form-grid" action="https://formspree.io/f/placeholder" method="POST">
+            <div class="form-group">
+              <label for="patientName">Patient Name *</label>
+              <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Contact Phone *</label>
+              <input type="tel" id="contactPhone" name="contactPhone" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="contactEmail">
+            </div>
+            <div class="form-group">
+              <label for="transportType">Transport Type</label>
+              <select id="transportType" name="transportType">
+                <option value="">Select type...</option>
+                <option value="hospital-discharge">Hospital Discharge</option>
+                <option value="dialysis">Dialysis Appointment</option>
+                <option value="snf-transfer">SNF Transfer</option>
+                <option value="long-distance">Long Distance</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="pickupAddress">Pickup Address *</label>
+              <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Street, City, State, ZIP" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="destinationAddress">Destination Address *</label>
+              <input type="text" id="destinationAddress" name="destinationAddress" placeholder="Street, City, State, ZIP" required>
+            </div>
+            <div class="form-group">
+              <label for="transportDate">Preferred Date</label>
+              <input type="date" id="transportDate" name="transportDate">
+            </div>
+            <div class="form-group">
+              <label for="transportTime">Preferred Time</label>
+              <input type="time" id="transportTime" name="transportTime">
+            </div>
+            <div class="form-group full-width">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" placeholder="Special requirements, medical equipment needs, etc."></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </div>
+          </form>
+          <p class="form-note">⚠️ <strong>For urgent requests, please call dispatch directly at <a href="tel:2095496501">(209) 549-6501</a>.</strong> This form is for non-emergency scheduling only.</p>
+        </div>
+        
+        <h2>Scheduling a Transport</h2>
+        <p>To schedule a transport, please call our dispatch line at <a href="tel:2095496501">(209) 549-6501</a>. Our team is available around the clock to assist you with scheduling and answer any questions about our services.</p>
+        
+        <p>For non-urgent inquiries, feel free to email us at <a href="mailto:kramermedicaltransport@gmail.com">kramermedicaltransport@gmail.com</a> and we'll respond within 24 hours.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <img src="images/logo.png" alt="Kramer Medical Transport Logo" class="footer-logo">
+        <h4>Kramer Medical Transport</h4>
+        <p>Professional BLS ambulance transportation serving Stanislaus County and all of California.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Dispatch: <a href="tel:2095496501">(209) 549-6501</a></p>
+        <p>Email: <a href="mailto:kramermedicaltransport@gmail.com">kramermedicaltransport@gmail.com</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Kramer Medical Transport. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

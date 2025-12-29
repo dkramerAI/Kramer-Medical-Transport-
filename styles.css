@@ -1198,30 +1198,26 @@ main {
   }
   
   .brand {
-    flex: 1;
-    min-width: 0;
-    max-width: 60%;
+    flex: 0 0 auto;
   }
   
   .brand-logo {
-    height: 38px;
+    height: 40px;
   }
   
+  /* Hide brand name on mobile - just show logo */
   .brand-name {
-    font-size: 0.85rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
   
   .dispatch-phone {
     position: static;
     transform: none;
     font-size: 0;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     justify-content: center;
     order: 2;
     margin-right: var(--spacing-xs);
@@ -1232,8 +1228,8 @@ main {
   }
   
   .dispatch-phone svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
   
   .dispatch-phone:hover {
@@ -1243,9 +1239,12 @@ main {
   .mobile-toggle {
     display: flex;
     order: 3;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
   }
   
-  /* Mobile Navigation - Clean Slide-down Panel */
+  /* Mobile Navigation - Compact Slide-down Panel */
   .nav {
     position: fixed;
     top: var(--header-height);
@@ -1254,14 +1253,14 @@ main {
     z-index: 999;
     background: var(--color-white);
     flex-direction: column;
-    padding: var(--spacing-md);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: var(--spacing-sm);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
   
   .nav.active {
@@ -1273,19 +1272,19 @@ main {
   .nav-list {
     flex-direction: column;
     width: 100%;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) 0;
+    gap: 6px;
+    padding: 4px 0;
   }
   
   .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: 12px var(--spacing-md);
     background: var(--color-off-white);
     border: none;
-    border-radius: 12px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--color-darker-gray);
     text-align: center;
@@ -1295,7 +1294,6 @@ main {
   .nav-link:hover {
     background: var(--color-accent-blue-light);
     color: var(--color-accent-blue);
-    transform: translateY(-2px);
   }
   
   .nav-link.active {
